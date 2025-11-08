@@ -1,0 +1,155 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: url('background.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  flex-wrap: wrap;
+}
+
+/* Menu Items */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: #0078d7;
+}
+
+/* Login Button (Right Corner) */
+.login-btn {
+  background-color: #0078d7;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Header */
+header {
+  text-align: left;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Main Content */
+main section {
+  padding: 20px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.55);
+  margin: 10px;
+  border-left: 5px solid #0078d7;
+  border-radius: 5px;
+  max-width: 700px;
+}
+
+main section h2 {
+  color: #ffd700;
+}
+
+#values ul, .services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li, #values li {
+  margin: 5px 0;
+}
+
+/* Catalog Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Hidden Sections */
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: left;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.85);
+  font-style: italic;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li a {
+    display: block;
+    width: 100%;
+  }
+
+  .login-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  main section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery img {
+    height: 80px;
+  }
+}
